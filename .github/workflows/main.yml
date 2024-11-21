@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:  # This line enables manual triggers
 
 jobs:
   build:
@@ -24,4 +25,3 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
-      
