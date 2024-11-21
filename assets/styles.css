@@ -1,0 +1,157 @@
+/* Import the custom font */
+@font-face {
+    font-family: 'Minecraft'; /* The name you want to use for the font */
+    src: url('assets/fonts/Monocraft-nerd-fonts-patched.ttf') format('truetype'); /* Correct path */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styling */
+body {
+    background-image: url('assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Minecraft'; /* Applying the custom font */
+}
+
+h1, h2 {
+    margin: 20px 0;
+    text-align: center;
+    font-family: 'Minecraft'; /* Apply custom font here as well */
+}
+
+.hidden {
+    display: none;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#colorDisplay {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border: 2px solid white;
+}
+
+#editor, .output {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Minecraft'; /* Ensure the font is used here too */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Minecraft'; /* Apply the custom font to buttons */
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+/* Startup Animation */
+#startup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    text-align: center;
+    animation: fadeIn 8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    20% { opacity: 0; }
+    100% { opacity: 8; }
+}
+
+/* Ultra-Smooth Scroll Up Animation */
+#minecraftWords {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: scrollUp 15s ease-in-out infinite; /* Increased duration for smoother scroll */
+    will-change: transform; /* Helps the browser optimize the animation */
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Smooth Word Animation */
+.minecraft-word {
+    font-size: 24px;
+    margin: 0 5px;
+    animation: wordAnimation 8s ease-in-out infinite; /* Increased duration for smoothness */
+    font-family: 'Minecraft'; /* Ensure the custom font is used here */
+}
+
+@keyframes wordAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    25% {
+        opacity: 0.7;
+        transform: translateY(50px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    75% {
+        opacity: 0.7;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}

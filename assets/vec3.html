@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker and JSON Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Startup Animation -->
+    <div id="startup">
+        <h1>Welcome to the Color Picker and JSON Editor</h1>
+        <h2>Created by LynxiumMC</h2>
+        <div id="minecraftWords">
+            <!-- Random Minecraft words will animate up here -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+        <h1>Color Picker to vec3 Converter</h1>
+        <input type="color" id="colorPicker" value="#ff0000">
+        <div id="colorDisplay"></div>
+        <div class="output">
+            <span id="vec3Display">vec3(0.0, 0.0, 0.0)</span>
+            <button id="copyVec3">Copy vec3</button>
+        </div>
+
+        <h1>Generated JSON</h1>
+        <div id="editor">
+            <label for="description">Description</label>
+            <input type="text" id="description" placeholder="Enter description" />
+
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter name" />
+
+            <label for="version">Version</label>
+            <input type="text" id="version" placeholder="Enter version (e.g., 1.0.0)" />
+
+            <textarea id="jsonOutput" rows="10" readonly></textarea>
+            <button id="generateJson">Generate JSON</button>
+            <button id="copyJson">Copy JSON</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
